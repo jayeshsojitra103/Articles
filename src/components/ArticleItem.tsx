@@ -1,6 +1,6 @@
 import React from "react";
 import { Article } from "../types/article";
-import { IMG_URL } from "../utils/urls";
+import { IMG_URL, PLACEHOLDER_IMG_URL } from "../utils/urls";
 import "./ArticleItem.scss";
 
 interface ArticleItemProps {
@@ -8,13 +8,14 @@ interface ArticleItemProps {
 }
 
 export const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
+  const imageUrl = article.image ? `${IMG_URL}/${article.image}` : PLACEHOLDER_IMG_URL;
   return (
     <div className="article-item">
       <div className="article-header">
         <div className="article-image">
           <img
             className="img-fluid"
-            src={`${IMG_URL}/${article.image}`}
+            src={imageUrl}
             alt={article.title}
           />
         </div>

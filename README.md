@@ -34,6 +34,8 @@ The application utilizes a dummy API to fetch articles:
 - **Pagination**: View articles in pages (5 articles per page).
 - **Loading State**: Displays a loading indicator while fetching data.
 - **Error Handling**: Handles API errors gracefully and displays appropriate messages.
+- **Placeholder Image**: Uses a placeholder image if an article's image is unavailable.
+
 
 ## Usage
 - The application displays a list of articles upon startup.
