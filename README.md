@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Setup Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clone the Repository:
+`git clone https://github.com/jayeshsojitra103/Articles`
 
-## Available Scripts
+### Install Dependencies:
 
-In the project directory, you can run:
+`npm install`
 
-### `npm start`
+## Development
+ **Start the development server:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Start the development server: `npm start`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This will open the application in your browser, typically at `http://localhost:3000`.
 
-### `npm test`
+## API
+The application utilizes a dummy API to fetch articles:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**URL:** `https://dummy-rest-api.specbee.site/api/v1/news`
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- TypeScript
+- Redux (for state management)
+- SASS/SCSS, Boostrap (for styling)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+- Fetches and displays articles related to US Stocks.
+- **Mobile-responsive**: Adapts to different screen sizes.
+- **Sorting**: Sort articles by date (latest/oldest) or title (ascending/descending).
+- **Filtering**: Filter articles by category and authors.
+- **Pagination**: View articles in pages (5 articles per page).
+- **Loading State**: Displays a loading indicator while fetching data.
+- **Error Handling**: Handles API errors gracefully and displays appropriate messages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+- The application displays a list of articles upon startup.
+- Use the checkbox in the Filters section to sort and filter articles.
+- The application automatically handles loading and displaying any errors encountered.
