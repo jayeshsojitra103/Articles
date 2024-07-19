@@ -1,0 +1,122 @@
+.article-item {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    border-bottom: 1px solid #DEE1E6;
+    padding-bottom: 28px;
+    transition: background-color 0.4s ease-in-out;
+    padding: 10px 10px 28px 10px; 
+    cursor: pointer;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        gap: 20px;
+        padding: 10px 10px 20px 10px; 
+    }
+
+    @media (max-width: 767px) {
+        gap: 20px;
+        padding: 10px; 
+    }
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+
+        .article-header {
+            .article-image {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .article-details {
+               
+                .article-title {
+                    color: #3498db;
+                }
+
+                .article-sub-heading {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .article-header {
+        display: flex;
+        gap: 20px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        .article-image {
+            max-width: 90px;
+            min-height: 72px;
+            width: 100%;
+
+            @media (max-width: 767px) {
+                max-width: 100%;
+                height: 150px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+                transition: transform 0.4s ease-in-out;
+            }
+        }
+
+        .article-details {
+            width: 100%;
+            .article-title {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: bold;
+                color: #171A1F;
+                transition: all ease-in 0.4s;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .article-sub-heading {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #565D6D;
+                    font-weight: 300;
+                    margin: 0;
+
+                }
+            }
+        }
+    }
+
+    .article-body {
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 0;
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+        }
+    }
+
+    .article-author {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 900;
+    }
+}

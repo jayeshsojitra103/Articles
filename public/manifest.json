@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "US Stocks Articles",
+  "name": "Explore the latest insights on US Stocks with our comprehensive articles.",
   "icons": [
     {
       "src": "favicon.ico",
