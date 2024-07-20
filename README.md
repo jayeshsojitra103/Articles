@@ -41,3 +41,6 @@ The application utilizes a dummy API to fetch articles:
 - The application displays a list of articles upon startup.
 - Use the checkbox in the Filters section to sort and filter articles.
 - The application automatically handles loading and displaying any errors encountered.
+
+## Note 
+In .env file, I haven't added API and image path because it's an open API that doesn't require authentication
