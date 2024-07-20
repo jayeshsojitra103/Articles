@@ -7,9 +7,9 @@ interface FilterItemProps {
 export const FilterItem: React.FC<FilterItemProps> = ({ filterData,onFilterChage,selectedItems }) => {
   return (
     <>
-      {filterData?.map((filter) => {
+      {filterData?.map((filter,index) => {
         return (
-          <div className="form-check" key={filter}>
+          <div className="form-check" key={index}>
             <input
               className="form-check-input"
               type="checkbox"

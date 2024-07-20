@@ -14,7 +14,7 @@ export const useBlogHook = () => {
   const articlesStatus = useSelector(
     (state: RootState) => state.articles.status
   );
-  const { articles, filteredArticles, status, error } = useSelector(
+  const { filteredArticles, status, error,authors:allAuthers,sources:allSources } = useSelector(
     (state: RootState) => state.articles
   );
 
@@ -49,15 +49,15 @@ export const useBlogHook = () => {
   useEffect(() => {
     // Extract authors and categories from API response
     const uniqueAuthors = [
-      ...new Set(articles.map((article) => article.author)),
+      ...new Set(allAuthers),
     ];
     setAuthors(uniqueAuthors);
 
     const uniqueCategories = [
-      ...new Set(articles.map((article) => article.source)),
+      ...new Set(allSources),
     ];
     setCategories(uniqueCategories);
-  }, [articles]);
+  }, [allSources,allAuthers]);
 
   const handleCategoryChange = (source: string) => {
     dispatch(onSourceFilter(source));

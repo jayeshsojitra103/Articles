@@ -17,11 +17,13 @@ export enum StatusType {
 
 export interface ArticlesState {
   articles: Article[];
+  authors:Array<string>;
+  sources:Array<string>;
   filteredArticles: Article[];
   status: StatusType;
   error: string | undefined;
-  authorFilters: string[];
-  sourceFilters: string[];
+  authorFilters: Array<string>;
+  sourceFilters: Array<string>;
   sortField: string;
   sortOrder: string;
 }

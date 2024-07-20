@@ -6,6 +6,8 @@ import { API_URL } from '../utils/urls';
 
 const initialState: ArticlesState = {
   articles: [],
+  authors:[],
+  sources:[],
   filteredArticles: [],
   status: StatusType.idle,
   error: undefined,
@@ -56,6 +58,8 @@ const articlesSlice = createSlice({
       .addCase(fetchArticles.fulfilled, (state, action) => {
         state.status = StatusType.succeeded;
         state.articles = action.payload;
+        state.authors=action.payload.map((article: { author: string; }) => article.author);
+        state.sources=action.payload.map((article: { source: string; }) => article.source)
         applyFilters(state);
       })
       .addCase(fetchArticles.rejected, (state, action) => {
