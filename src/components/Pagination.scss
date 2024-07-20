@@ -4,10 +4,11 @@
     list-style-type: none;
     gap: 10px;
     margin-top: 60px;
-    
+
     @media (min-width: 768px) and (max-width: 1023px) {
         margin-top: 40px;
     }
+
     @media (max-width: 767px) {
         margin-top: 20px;
     }
@@ -16,12 +17,19 @@
         text-align: center;
         cursor: pointer;
 
+        &:hover {
+            span {
+                background-color: #1E2128;
+                color: #fff;
+            };
+        }
+
         span {
             font-size: 12px;
             line-height: 20px;
             font-weight: bold;
             padding: 6px 12px;
-            transition: all ease-in 0.5s;
+            transition: all ease-in 0.4s;
             border-radius: 50%;
         }
     }
@@ -29,9 +37,7 @@
     .active {
         span {
             background-color: #1E2128;
-            
             color: #fff;
-
         }
     }
 }
